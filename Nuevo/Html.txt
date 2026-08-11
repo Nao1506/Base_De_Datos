@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mi autobiografía</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="Estilo.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark mi-navbar">
+        <div class="container">
+
+            <a class="navbar-brand" href="#">
+                Mi autobiografía
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#menuNavegacion">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuNavegacion">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre-mi">Sobre mí</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gustos">Mis gustos</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hobbies">Hobbies</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#objetivos">Objetivos</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <header class="presentacion">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-md-7">
+
+                    <p class="texto-pequeno">
+                        ¡Hola! Soy...
+                    </p>
+
+                    <h1>Naomi Marquez</h1>
+
+                    <p class="descripcion">
+                        Soy una persona que aprende rapido y tambien timida.
+                        cuando entiendo los contenidos se me hace facil trabajar, 
+                        pero si no entiendo algo me esfuerzo en buscar impormacion para entender
+                        .
+                    </p>
+
+                    <a href="#sobre-mi" class="btn btn-principal">
+                        Un poco más sobre mi:
+                    </a>
+
+                </div>
+
+    <section id="sobre-mi" class="seccion">
+
+        <div class="container">
+
+            <h2 class="titulo-seccion">
+                Sobre mí
+            </h2>
+
+            <div class="row justify-content-center">
+
+                <div class="col-md-9">
+
+                    <div class="card tarjeta">
+
+                        <div class="card-body">
+
+                            <h3>¿Quién soy?</h3>
+
+                            <p>
+                                Mi nombre es <strong>Naomi</strong>.
+                                Tengo <strong>16</strong> años y estudio
+                                en <strong>en la secundaria ET N° 32 </strong>.
+                            </p>
+
+                            <p>
+                                Vivo en <strong>Caseros</strong> y actualmente
+                                estoy estudiando una orientación relacionada con
+                                <strong>Computacion</strong>.
+                            </p>
+
+                            <p>
+                                Me considero una persona
+                                <strong>Timida, atenta, amable, graciosa,cariñosa,alegre.</strong>.
+                                Siempre intento aprender y mejorar en las cosas
+                                que me interesan.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="gustos" class="seccion seccion-diferente">
+
+        <div class="container">
+
+            <h2 class="titulo-seccion">
+                Mis gustos
+            </h2>
+
+            <p class="texto-centro">
+                Algunas de las cosas que más me gustan son:
+            </p>
+
+
+            <div class="row g-4">
+
+
+
+                <div class="col-md-4">
+
+                    <div class="card tarjeta-gusto h-100">
+
+                        <div class="card-body text-center">
+
+                            <div class="icono">
+                                🎵
+                            </div>
+
+                            <h3>Música</h3>
+
+                            <p>
+                                Me gusta escuchar
+                                <strong>Michael Jackson</strong>.
+                            </p>
+
+                            <button class="btn btn-secundario">
+                                Mi favorito
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="col-md-4">
+
+                    <div class="card tarjeta-gusto h-100">
+
+                        <div class="card-body text-center">
+
+                            <div class="icono">
+                                🎮
+                            </div>
+
+                            <h3>Videojuegos</h3>
+
+                            <p>
+                                En mi tiempo libre disfruto jugar
+                                <strong> Flee The Facility</strong>.
+                            </p>
+
+                            <button class="btn btn-secundario">
+                                Mis favoritos
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="col-md-4">
+
+                    <div class="card tarjeta-gusto h-100">
+
+                        <div class="card-body text-center">
+
+                            <div class="icono">
+                                🎬
+                            </div>
+
+                            <h3>Series y películas</h3>
+
+                            <p>
+                                Me gusta mirar
+                                <strong>Toda la saga de Jurassic World/Park</strong>.
+                            </p>
+
+                            <button class="btn btn-secundario">
+                                Ver favoritos
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="hobbies" class="seccion">
+
+        <div class="container">
+
+            <h2 class="titulo-seccion">
+                Mis hobbies
+            </h2>
+
+            <div class="row align-items-center">
+
+
+                <div class="col-md-6">
+
+                    <div class="card tarjeta">
+
+                        <div class="card-body">
+
+                            <h3>¿Qué hago en mi tiempo libre?</h3>
+
+                            <p>
+                                Algunos de mis hobbies son:
+                            </p>
+
+                            <ul class="lista-hobbies">
+
+                                <li>🎮 Jugar videojuegos</li>
+                                <li>🎵 Escuchar música</li>
+                                <li>🎨 Hacer manualidades</li>
+                                <li>📺 Películas</li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6">
+
+                    <div class="caja-frase">
+
+                        <h3> "Frase que me representa" </h3>
+                        <h3>-"No me gusta."</h3>
+
+                        <p>"Frase que me gusta" </p>
+                        <p> -"Fuerza leona" </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="objetivos" class="seccion seccion-diferente">
+
+        <div class="container">
+
+            <h2 class="titulo-seccion">
+                Mis objetivos
+            </h2>
+
+            <div class="row g-4">
+
+
+                <div class="col-md-4">
+
+                    <div class="objetivo">
+
+                        <span>📚</span>
+
+                        <h3>Estudios</h3>
+
+                        <p>
+                            En busqueda.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <div class="objetivo">
+
+                        <span>💻</span>
+
+                        <h3>Trabajo</h3>
+
+                        <p>
+
+                            Ganar dinero.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <div class="objetivo">
+
+                        <span>🌟</span>
+
+                        <h3>Futuro</h3>
+
+                        <p>
+                            Tener dinero y casarme con mi novio, adoptando muchos perros y gatos.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="contacto">
+
+        <div class="container text-center">
+
+            <h2>
+                ¡Gracias por visitar mi página!
+            </h2>
+
+            <p>
+                Esta página fue creada como parte de un trabajo de HTML,
+                CSS y Bootstrap.
+            </p>
+
+            <p>
+                © 2026 - Naomi Marquez Valiente
+            </p>
+
+        </div>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+
+</html>
