@@ -5,11 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Teoría de MySQL</title>
+    <title>Manual Completo de MySQL</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://jsdelivr.net" rel="stylesheet">
 
     <link rel="stylesheet" href="Estilo.css">
+    <style>
+
+        pre {
+            background-color: rgb(197, 70, 91);
+            color: #8d293d;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: left;
+            font-size: 0.9rem;
+            overflow-x: auto;
+        }
+        code {
+            color: #e9a3be;
+        }
+        pre code {
+            color: #e4a7bf;
+        }
+    </style>
 </head>
 
 <body>
@@ -18,7 +36,7 @@
         <div class="container">
 
             <a class="navbar-brand" href="#">
-                Manual de MySQL
+                Master en MySQL
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -31,19 +49,19 @@
                 <ul class="navbar-nav ms-auto">
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#introduccion">Introducción</a>
+                        <a class="nav-link" href="#arquitectura">Arquitectura y Motor</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#comandos">Comandos Principales</a>
+                        <a class="nav-link" href="#comandos-crud">Comandos y Sintaxis</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#tipos-datos">Tipos de Datos</a>
+                        <a class="nav-link" href="#relaciones">Relaciones y Joins</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#buenas-practicas">Buenas Prácticas</a>
+                        <a class="nav-link" href="#avanzado">Optimización Avanzada</a>
                     </li>
 
                 </ul>
@@ -55,50 +73,51 @@
     <header class="presentacion">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-7">
+                <div class="col-md-8">
                     <p class="texto-pequeno">
-                        Sistemas de Bases de Datos Relacionales
+                        Administración Avanzada de Bases de Datos Relacionales
                     </p>
 
-                    <h1>¿Qué es MySQL?</h1>
+                    <h1>El Ecosistema de MySQL</h1>
 
                     <p class="descripcion">
-                        Es un sistema de gestión de bases de datos relacional (RDBMS) basado en el lenguaje estructurado de consultas (SQL). Es rápido, seguro, de código abierto y fundamental para el desarrollo web moderno.
+                        MySQL es el motor de base de datos relacional de código abierto más popular del mundo. Desarrollado por Oracle, es la columna vertebral del stack **LAMP/MERN** y procesa las consultas de plataformas masivas como WordPress, Facebook y Twitter mediante el cumplimiento estricto de las propiedades <strong>ACID</strong> (Atomicidad, Consistencia, Aislamiento y Durabilidad).
                     </p>
 
-                    <a href="#introduccion" class="btn btn-principal">
-                        Comenzar a aprender:
+                    <a href="#arquitectura" class="btn btn-principal">
+                        Explorar Documentación Profunda:
                     </a>
                 </div>
             </div>
         </div>
     </header>
 
-    <section id="introduccion" class="seccion">
+    <section id="arquitectura" class="seccion">
         <div class="container">
 
             <h2 class="titulo-seccion">
-                Introducción
+                Arquitectura y Motores de Almacenamiento
             </h2>
 
             <div class="row justify-content-center">
-                <div class="col-md-9">
+                <div class="col-md-10">
 
-                    <div class="card tarjeta">
+                    <div class="card tarjeta mb-4">
                         <div class="card-body">
 
-                            <h3>¿Cómo funciona?</h3>
+                            <h3>Motores de Almacenamiento: InnoDB vs MyISAM</h3>
 
                             <p>
-                                MySQL almacena la información en <strong>tablas</strong> compuestas por filas y columnas. Cada fila representa un registro único y cada columna un campo con un tipo de dato específico.
+                                A diferencia de otros RDBMS, MySQL permite elegir diferentes motores de almacenamiento para cada tabla. Los dos más importantes son:
                             </p>
+                            
+                            <ul>
+                                <li><strong>InnoDB:</strong> Es el motor por defecto. Soporta <strong>transacciones</strong>, bloqueo a nivel de fila y restricciones de clave foránea (integridad referencial). Es ideal para sistemas donde se escribe y actualiza información constantemente.</li>
+                                <li><strong>MyISAM:</strong> Antiguo motor por defecto. No soporta transacciones ni claves foráneas, pero es extremadamente rápido para operaciones de **lectura masiva** y búsquedas de texto completo (Full-text search).</li>
+                            </ul>
 
                             <p>
-                                Utiliza una arquitectura <strong>cliente-servidor</strong>, donde las aplicaciones solicitan datos al servidor de MySQL mediante sentencias SQL, y este procesa y devuelve los resultados.
-                            </p>
-
-                            <p>
-                                Se destaca por ser una herramienta <strong>eficiente, escalable, confiable y con un soporte masivo</strong> en la comunidad del desarrollo de software.
+                                Una base de datos relacional robusta siempre debe estructurarse garantizando que los datos no queden huérfanos, utilizando restricciones como <code>ON DELETE CASCADE</code> u <code>ON DELETE SET NULL</code>.
                             </p>
 
                         </div>
@@ -110,15 +129,15 @@
         </div>
     </section>
 
-    <section id="comandos" class="seccion seccion-diferente">
+    <section id="comandos-crud" class="seccion seccion-diferente">
         <div class="container">
 
             <h2 class="titulo-seccion">
-                Comandos Principales
+                Comandos y Sintaxis SQL (CRUD)
             </h2>
 
             <p class="texto-centro">
-                Las sentencias básicas del lenguaje estructurado de consultas (SQL):
+                Ejemplos reales de manipulación de datos (DML) y definición de datos (DDL):
             </p>
 
             <div class="row g-4">
@@ -126,19 +145,13 @@
                 <div class="col-md-4">
                     <div class="card tarjeta-gusto h-100">
                         <div class="card-body text-center">
-                            <div class="icono">
-                                🔍
-                            </div>
-
-                            <h3>SELECT</h3>
-
-                            <p>
-                                Se utiliza para <strong>consultar y traer datos</strong> específicos desde una o más tablas de la base de datos.
-                            </p>
-
-                            <button class="btn btn-secundario">
-                                Ver sintaxis
-                            </button>
+                            <div class="icono">🔍</div>
+                            <h3>Consultas Filtros</h3>
+                            <p>Uso de <code>WHERE</code>, <code>LIKE</code> y operadores lógicos para segmentar.</p>
+                            <pre><code>SELECT nombre, precio 
+FROM productos 
+WHERE precio > 150 
+AND estado = 'activo';</code></pre>
                         </div>
                     </div>
                 </div>
@@ -146,19 +159,13 @@
                 <div class="col-md-4">
                     <div class="card tarjeta-gusto h-100">
                         <div class="card-body text-center">
-                            <div class="icono">
-                                ➕
-                            </div>
-
-                            <h3>INSERT</h3>
-
-                            <p>
-                                Permite <strong>agregar nuevas filas</strong> o registros de datos dentro de una tabla existente.
-                            </p>
-
-                            <button class="btn btn-secundario">
-                                Ver sintaxis
-                            </button>
+                            <div class="icono">➕</div>
+                            <h3>Inserción Segura</h3>
+                            <p>Declaración explícita de campos para evitar errores de mapeo.</p>
+                            <pre><code>INSERT INTO usuarios 
+(nombre, email, edad) 
+VALUES 
+('Naomi', 'naomi@mail.com', 16);</code></pre>
                         </div>
                     </div>
                 </div>
@@ -166,19 +173,12 @@
                 <div class="col-md-4">
                     <div class="card tarjeta-gusto h-100">
                         <div class="card-body text-center">
-                            <div class="icono">
-                                🔄
-                            </div>
-
-                            <h3>UPDATE</h3>
-
-                            <p>
-                                Se usa para <strong>modificar o actualizar</strong> los valores de los registros que ya están guardados.
-                            </p>
-
-                            <button class="btn btn-secundario">
-                                Ver sintaxis
-                            </button>
+                            <div class="icono">🔄</div>
+                            <h3>Actualización</h3>
+                            <p><strong>¡Crucial!</strong> Siempre debe llevar una cláusula <code>WHERE</code> para no alterar toda la tabla.</p>
+                            <pre><code>UPDATE usuarios 
+SET estado = 'Premium' 
+WHERE id_usuario = 5;</code></pre>
                         </div>
                     </div>
                 </div>
@@ -188,11 +188,11 @@
         </div>
     </section>
 
-    <section id="tipos-datos" class="seccion">
+    <section id="relaciones" class="seccion">
         <div class="container">
 
             <h2 class="titulo-seccion">
-                Tipos de Datos
+                Relaciones y Consultas Multi-Tabla (JOINS)
             </h2>
 
             <div class="row align-items-center">
@@ -201,17 +201,17 @@
                     <div class="card tarjeta">
                         <div class="card-body">
 
-                            <h3>Formatos más utilizados</h3>
+                            <h3>Tipos de JOIN más utilizados</h3>
 
                             <p>
-                                Al definir columnas, debemos elegir el tipo de dato correcto:
+                                Para unificar registros de diferentes tablas que comparten un identificador común, usamos:
                             </p>
 
                             <ul class="lista-hobbies">
-                                <li>🔢 INT - Números enteros</li>
-                                <li>🔤 VARCHAR - Cadenas de texto variables</li>
-                                <li>📅 DATE - Formato de fecha (AAAA-MM-DD)</li>
-                                <li>🪙 DECIMAL - Números con punto flotante exactos</li>
+                                <li>🔗 <strong>INNER JOIN:</strong> Devuelve filas únicamente cuando hay una coincidencia exacta en ambas tablas.</li>
+                                <li>⬅️ <strong>LEFT JOIN:</strong> Devuelve todas las filas de la tabla izquierda, y las filas coincidentes de la derecha (si no hay coincidencia, rellena con NULL).</li>
+                                <li>➡️ <strong>RIGHT JOIN:</strong> Opuesto al anterior; prioriza los registros de la tabla derecha.</li>
+                                <li>📊 <strong>GROUP BY:</strong> Agrupa filas que tienen los mismos valores para calcular funciones como <code>SUM()</code>, <code>COUNT()</code> o <code>AVG()</code>.</li>
                             </ul>
 
                         </div>
@@ -220,11 +220,13 @@
 
                 <div class="col-md-6">
                     <div class="caja-frase">
-                        <h3> "Clave Primaria (Primary Key)" </h3>
-                        <h3>- "Identifica cada registro de forma única."</h3>
-
-                        <p>"Clave Foránea (Foreign Key)" </p>
-                        <p> - "Vincula y relaciona las tablas entre sí." </p>
+                        <h3>Ejemplo Práctico de INNER JOIN</h3>
+                        <pre><code>SELECT clientes.nombre, pedidos.total
+FROM clientes
+INNER JOIN pedidos 
+ON clientes.id = pedidos.cliente_id
+WHERE pedidos.fecha >= '2026-01-01';</code></pre>
+                        <p>Esta consulta vincula la tabla de clientes con sus respectivas compras realizadas en el año actual.</p>
                     </div>
                 </div>
 
@@ -233,41 +235,24 @@
         </div>
     </section>
 
-    <section id="buenas-practicas" class="seccion seccion-diferente">
+    <section id="avanzado" class="seccion seccion-diferente">
         <div class="container">
 
             <h2 class="titulo-seccion">
-                Buenas Prácticas
+                Optimización y Configuración Avanzada
             </h2>
 
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="objetivo">
-                        <span>📚</span>
-                        <h3>Normalización</h3>
-                        <p>Diseñar estructuras sin redundancia de datos para evitar problemas de almacenamiento.</p>
+                        <span>📊</span>
+                        <h3>Tipos de Datos Óptimos</h3>
+                        <p>Usa <code>TINYINT</code> para opciones numéricas pequeñas (como estados de 0 y 1) y <code>VARCHAR</code> ajustados en lugar de <code>TEXT</code> para optimizar la memoria caché de los índices.</p>
                     </div>
                 </div>
                 
                 <div class="col-md-4">
                     <div class="objetivo">
-                        <span>🔒</span>
-                        <h3>Seguridad</h3>
-                        <p>Asignar privilegios estrictos a los usuarios y evitar la cuenta 'root' en producción.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="objetivo">
-                        <span>⚡</span>
-                        <h3>Indexación</h3>
-                        <p>Crear índices en las columnas de alta consulta para acelerar las búsquedas drásticamente.</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
 
 </body>
 </html>
