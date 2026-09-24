@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Teoría de MySQL</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="Estilo.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark mi-navbar">
+        <div class="container">
+
+            <a class="navbar-brand" href="#">
+                Manual de MySQL
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#menuNavegacion">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuNavegacion">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#introduccion">Introducción</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#comandos">Comandos Principales</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tipos-datos">Tipos de Datos</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#buenas-practicas">Buenas Prácticas</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <header class="presentacion">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <p class="texto-pequeno">
+                        Sistemas de Bases de Datos Relacionales
+                    </p>
+
+                    <h1>¿Qué es MySQL?</h1>
+
+                    <p class="descripcion">
+                        Es un sistema de gestión de bases de datos relacional (RDBMS) basado en el lenguaje estructurado de consultas (SQL). Es rápido, seguro, de código abierto y fundamental para el desarrollo web moderno.
+                    </p>
+
+                    <a href="#introduccion" class="btn btn-principal">
+                        Comenzar a aprender:
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="introduccion" class="seccion">
+        <div class="container">
+
+            <h2 class="titulo-seccion">
+                Introducción
+            </h2>
+
+            <div class="row justify-content-center">
+                <div class="col-md-9">
+
+                    <div class="card tarjeta">
+                        <div class="card-body">
+
+                            <h3>¿Cómo funciona?</h3>
+
+                            <p>
+                                MySQL almacena la información en <strong>tablas</strong> compuestas por filas y columnas. Cada fila representa un registro único y cada columna un campo con un tipo de dato específico.
+                            </p>
+
+                            <p>
+                                Utiliza una arquitectura <strong>cliente-servidor</strong>, donde las aplicaciones solicitan datos al servidor de MySQL mediante sentencias SQL, y este procesa y devuelve los resultados.
+                            </p>
+
+                            <p>
+                                Se destaca por ser una herramienta <strong>eficiente, escalable, confiable y con un soporte masivo</strong> en la comunidad del desarrollo de software.
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="comandos" class="seccion seccion-diferente">
+        <div class="container">
+
+            <h2 class="titulo-seccion">
+                Comandos Principales
+            </h2>
+
+            <p class="texto-centro">
+                Las sentencias básicas del lenguaje estructurado de consultas (SQL):
+            </p>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="card tarjeta-gusto h-100">
+                        <div class="card-body text-center">
+                            <div class="icono">
+                                🔍
+                            </div>
+
+                            <h3>SELECT</h3>
+
+                            <p>
+                                Se utiliza para <strong>consultar y traer datos</strong> específicos desde una o más tablas de la base de datos.
+                            </p>
+
+                            <button class="btn btn-secundario">
+                                Ver sintaxis
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card tarjeta-gusto h-100">
+                        <div class="card-body text-center">
+                            <div class="icono">
+                                ➕
+                            </div>
+
+                            <h3>INSERT</h3>
+
+                            <p>
+                                Permite <strong>agregar nuevas filas</strong> o registros de datos dentro de una tabla existente.
+                            </p>
+
+                            <button class="btn btn-secundario">
+                                Ver sintaxis
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card tarjeta-gusto h-100">
+                        <div class="card-body text-center">
+                            <div class="icono">
+                                🔄
+                            </div>
+
+                            <h3>UPDATE</h3>
+
+                            <p>
+                                Se usa para <strong>modificar o actualizar</strong> los valores de los registros que ya están guardados.
+                            </p>
+
+                            <button class="btn btn-secundario">
+                                Ver sintaxis
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section id="tipos-datos" class="seccion">
+        <div class="container">
+
+            <h2 class="titulo-seccion">
+                Tipos de Datos
+            </h2>
+
+            <div class="row align-items-center">
+
+                <div class="col-md-6">
+                    <div class="card tarjeta">
+                        <div class="card-body">
+
+                            <h3>Formatos más utilizados</h3>
+
+                            <p>
+                                Al definir columnas, debemos elegir el tipo de dato correcto:
+                            </p>
+
+                            <ul class="lista-hobbies">
+                                <li>🔢 INT - Números enteros</li>
+                                <li>🔤 VARCHAR - Cadenas de texto variables</li>
+                                <li>📅 DATE - Formato de fecha (AAAA-MM-DD)</li>
+                                <li>🪙 DECIMAL - Números con punto flotante exactos</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="caja-frase">
+                        <h3> "Clave Primaria (Primary Key)" </h3>
+                        <h3>- "Identifica cada registro de forma única."</h3>
+
+                        <p>"Clave Foránea (Foreign Key)" </p>
+                        <p> - "Vincula y relaciona las tablas entre sí." </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section id="buenas-practicas" class="seccion seccion-diferente">
+        <div class="container">
+
+            <h2 class="titulo-seccion">
+                Buenas Prácticas
+            </h2>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="objetivo">
+                        <span>📚</span>
+                        <h3>Normalización</h3>
+                        <p>Diseñar estructuras sin redundancia de datos para evitar problemas de almacenamiento.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="objetivo">
+                        <span>🔒</span>
+                        <h3>Seguridad</h3>
+                        <p>Asignar privilegios estrictos a los usuarios y evitar la cuenta 'root' en producción.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="objetivo">
+                        <span>⚡</span>
+                        <h3>Indexación</h3>
+                        <p>Crear índices en las columnas de alta consulta para acelerar las búsquedas drásticamente.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
