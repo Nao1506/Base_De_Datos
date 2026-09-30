@@ -1,0 +1,177 @@
+body {
+    background-color: #fff0f6;
+    font-family: Arial, sans-serif;
+    color: #5a2340;
+}
+
+.navbar {
+    background-color: #d63384;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #ffd6e8;
+}
+
+.hero {
+    background: linear-gradient(135deg, #d63384, #f783ac);
+    padding: 120px 20px;
+}
+
+.hero h1 {
+    text-shadow: 2px 2px 5px #8a2454;
+}
+
+.btn-primary {
+    background-color: #d63384;
+    border-color: #d63384;
+}
+
+.btn-primary:hover {
+    background-color: #b5256b;
+    border-color: #b5256b;
+}
+
+.btn-success {
+    background-color: #e64980;
+    border-color: #e64980;
+}
+
+.btn-success:hover {
+    background-color: #c93669;
+    border-color: #c93669;
+}
+
+.btn-light {
+    color: #d63384;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 2px solid #f3a6c5;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(214, 51, 132, 0.25);
+}
+
+.card-title,
+.card h3,
+.card h4,
+.card h5 {
+    color: #d63384;
+}
+
+.info-box {
+    background-color: #ffffff;
+    border-left: 6px solid #d63384;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(214, 51, 132, 0.15);
+    height: 100%;
+}
+
+.info-box h3 {
+    color: #d63384;
+}
+
+.table {
+    background-color: white;
+}
+
+.table-dark {
+    background-color: #d63384;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: #fff0f6;
+}
+
+.table-hover > tbody > tr:hover > * {
+    background-color: #ffd6e8;
+}
+
+pre {
+    background-color: #3d1f2e;
+    color: #ff9fca;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+code {
+    color: #ff9fca;
+    font-family: Consolas, monospace;
+}
+
+.form-control,
+.form-select {
+    border: 2px solid #f3a6c5;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #d63384;
+    box-shadow: 0 0 0 0.2rem rgba(214, 51, 132, 0.2);
+}
+
+.alert-info {
+    background-color: #ffe0ed;
+    border-color: #f3a6c5;
+    color: #7a2850;
+}
+
+.badge.bg-primary {
+    background-color: #d63384;
+}
+
+.badge.bg-success {
+    background-color: #e64980;
+}
+
+footer {
+    background-color: #8f2859;
+    margin-top: 60px;
+}
+
+footer p {
+    color: white;
+}
+
+.entidad {
+    border-color: #d63384;
+    background-color: #fff0f6;
+}
+
+.entidad h4 {
+    background-color: #d63384;
+}
+
+.relacion {
+    background-color: #ffe0ed;
+    border-color: #e64980;
+}
+
+.linea {
+    background-color: #d63384;
+}
+
+.explicacion {
+    border-left-color: #d63384;
+    background-color: white;
+}
+
+.explicacion h4 {
+    color: #d63384;
+}
